@@ -2,6 +2,24 @@
 # Copyright (C) Kazumichi INOUE <k.inoue@oyama-ct.ac.jp>, 2016-06-02
 SHELL = /bin/sh
 
-all:
-	g++ -o windowOpen windowOpen.cpp `pkg-config --cflags opencv` `pkg-config --libs opencv` -std=gnu++11
+CXX = g++
+
+SRC = windowOpen.cpp
+OBJ = $(SRC:.cpp=.o)
+TARGET = windowOpen
+
+CXXFLAGS = -c -O2 -Wall `pkg-config --cflags opencv` -std=gnu++11
+LDLIBS = `pkg-config --libs opencv` -std=gnu++11
+
+.cpp.o:
+	$(CXX) $(CXXFLAGS) $<
+
+all:$(TARGET)
+
+$(TARGET): $(OBJ)
+	$(CXX) -o $@ $< $(LDLIBS)
+
+clean:
+	rm -f $(TARGET) $(OBJ) *~ *.o
+
 
