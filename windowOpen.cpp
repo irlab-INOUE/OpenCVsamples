@@ -5,9 +5,14 @@
 
 int main(int argc, const char * argv[])
 {
-  cv::Mat img(cv::Size(320, 240), CV_8UC3, cv::Scalar(60, 150, 80));
-  cv::namedWindow("Hello, OpenCV", cv::WINDOW_AUTOSIZE);
-  cv::imshow("Hello, OpenCV", img);
+	// 画像とする配列img を定義
+	cv::Mat img(cv::Size(320, 240), CV_8UC3, cv::Scalar(60, 150, 80));
 
-  cv::waitKey(0);
+	// 表示するウィンドウを定義
+	cv::namedWindow("Hello, OpenCV", cv::WINDOW_AUTOSIZE);
+
+	// ウィンドウを指定して表示
+	cv::imshow("Hello, OpenCV", img);
+
+	cv::waitKey(0);
 }
