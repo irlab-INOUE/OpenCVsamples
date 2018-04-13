@@ -14,10 +14,10 @@ LDLIBS = `pkg-config --libs opencv` -std=gnu++11
 .cpp.o:
 	$(CXX) $(CXXFLAGS) $<
 
-all:$(TARGET)
+all: $(TARGET)
 
 $(TARGET): $(OBJ)
-	$(CXX) -o $@ $< $(LDLIBS)
+	$(CXX) -o $@ $@.o $(LDLIBS)
 
 clean:
 	rm -f $(TARGET) $(OBJ) *~ *.o
