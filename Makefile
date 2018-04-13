@@ -4,9 +4,9 @@ SHELL = /bin/sh
 
 CXX = g++
 
-SRC = windowOpen.cpp
+SRC = windowOpen.cpp drawPoints.cpp
 OBJ = $(SRC:.cpp=.o)
-TARGET = windowOpen
+TARGET = windowOpen drawPoints
 
 CXXFLAGS = -c -O2 -Wall `pkg-config --cflags opencv` -std=gnu++11
 LDLIBS = `pkg-config --libs opencv` -std=gnu++11
