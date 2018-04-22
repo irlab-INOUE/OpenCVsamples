@@ -35,15 +35,20 @@ void usage()
 }
 
 int main(int argc, char const *argv[]){
+	/*
+	 * コマンドラインオプションのチェック
+	 * 足りない場合は使い方を表示して終了させる
+	 */
 	if (argc < 3) {
 		usage();
 		return 1;
 	}
-	cv::Mat image = cv::imread(argv[1]);
-	std::string filename = argv[2];
-	cv::Mat detectFaceImage = detectFaceInImage(image, filename);
-	cv::imshow("detect face", detectFaceImage);
-	cv::waitKey(0);
+
+	cv::Mat image = cv::imread(argv[1]); 	// 顔画像ファイル
+	std::string filename = argv[2];			// 検出器ファイル
+	cv::Mat detectFaceImage = detectFaceInImage(image, filename);	// 顔検出処理
+	cv::imshow("detect face", detectFaceImage);	//結果の表示
+	cv::waitKey(0);		// キー待ち, 何か押されると終了する
 
 	return 0;
 }
