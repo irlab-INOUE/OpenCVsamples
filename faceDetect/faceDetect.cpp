@@ -15,7 +15,7 @@ cv::Mat detectFaceInImage(cv::Mat &image, std::string &cascade_file){
 				cv::Point(faces[i].x + faces[i].width, faces[i].y + faces[i].height),
 				cv::Scalar(0, 200, 0),
 				3,
-				CV_AA);
+				16);
 	}
 	return image;
 }
