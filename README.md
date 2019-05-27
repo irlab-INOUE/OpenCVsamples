@@ -4,13 +4,16 @@ OpenCV のサンプルプログラム，テンプレート的に使ってくだ�
 # ディレクトリ構成
     .
     ├── faceDetect
-    │   ├── Makefile
+    │   ├── CMakeLists.txt
     │   ├── face.jpg
     │   └── faceDetect.cpp
     └── firstSamples
-        ├── Makefile
-        ├── drawPoints.cpp
-        └── windowOpen.cpp
+        ├── drawPoints
+        │   ├── CMakeLists.txt
+        │   └── drawPoints.cpp
+        └── windowOpen
+            ├── CMakeLists.txt
+            └── windowOpen.cpp
 
 
 ## firstSamples
