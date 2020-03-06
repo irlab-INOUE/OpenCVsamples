@@ -19,12 +19,11 @@ int main(int argc, const char * argv[])
 	int endX = 320;
 	int endY = 120;
 
-	for (int y = startY; y <= endY; y++) {
-		ptr = img.ptr<cv::Vec3b>(y);
-		for (int x = startX; x <= endX; x++) {
-			ptr[x] = cv::Vec3b(0, 0, 0);
-		}
-	}
+    for (int y = startY; y <= endY; y++) {
+        for (int x = startX; x <= endX; x++) {
+            img.at<cv::Vec3b>(y, x) = cv::Vec3b(0, 0, 0);
+        }
+    }
 
 	// ウィンドウを指定して表示
 	cv::imshow("Hello, OpenCV", img);
