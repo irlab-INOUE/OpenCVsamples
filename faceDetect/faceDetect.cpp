@@ -26,11 +26,13 @@ void usage()
 	std::cout << "./faceDetect <顔画像ファイル名> <検出器>" << std::endl;
 	std::cout << "<検出器> はOpenCVのインストールディレクトリに入っている\n";
 	std::cout << "例えば，Mac では以下のパスにある\n";
-	std::cout << "/usr/local/Cellar/opencv/3.4.1_2/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml\n";
+	std::cout << "\t/usr/local/Cellar/opencv/3.4.1_2/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml\n";
+    std::cout << "Ubuntu18の場合\n";
+    std::cout << "\t/usr/local/share/opencv4/haarcascades/haarcascade_frontalface_default.xml\n";
 	std::cout << "検出器は用途によって複数ある．上記ディレクトリ内にも複数あるので試してみよ\n";
 	std::cout << std::endl;
 	std::cout << "サンプルプログラムの実行方法\n";
-	std::cout << "./faceDetect face.jpg /usr/local/Cellar/opencv/3.4.1_2/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml\n";
+	std::cout << "./faceDetect ../face.jpg /usr/local/share/opencv4/haarcascades/haarcascade_frontalface_default.xml\n";
 	std::cout << std::endl;
 }
 
