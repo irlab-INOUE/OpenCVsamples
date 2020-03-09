@@ -1,9 +1,7 @@
 #include <iostream>
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc.hpp>
+#include <opencv2/opencv.hpp>
 
-int main(int argc, const char * argv[])
+int main(int argc, char *argv[])
 {
 	// 画像とする配列img を定義
 	cv::Mat img(cv::Size(320, 240), CV_8UC3, cv::Scalar(60, 150, 80));
@@ -15,4 +13,6 @@ int main(int argc, const char * argv[])
 	cv::imshow("Hello, OpenCV", img);
 
 	cv::waitKey(0);
+
+    return 0;
 }
