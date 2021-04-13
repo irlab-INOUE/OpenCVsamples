@@ -7,14 +7,20 @@ OpenCV のサンプルプログラム，テンプレート的に使ってくだ�
     │   ├── CMakeLists.txt
     │   ├── face.jpg
     │   └── faceDetect.cpp
-    └── firstSamples
-        ├── drawPoints
-        │   ├── CMakeLists.txt
-        │   └── drawPoints.cpp
-        └── windowOpen
-            ├── CMakeLists.txt
-            └── windowOpen.cpp
-
+    ├── firstSamples
+    │   ├── drawPoints
+    │   │   ├── CMakeLists.txt
+    │   │   └── drawPoints.cpp
+    │   └── windowOpen
+    │       ├── CMakeLists.txt
+    │       └── windowOpen.cpp
+    ├── readFile
+    │   ├── CMakeLists.txt
+    │   └── main.cpp
+    └── takePhoto
+        ├── CMakeLists.txt
+        ├── image.png
+        └── main.cpp
 
 ## firstSamples
 最初に試してみるサンプルプログラム
@@ -28,3 +34,9 @@ OpenCV のサンプルプログラム，テンプレート的に使ってくだ�
 顔検出のサンプルプログラム
 
 使用方法は ./faceDetect と打つと表示されるので参考にしてほしい
+
+## readFile
+画像ファイルを読み込んで表示する
+
+## takePhoto
+カメラから画像を取得して表示する
